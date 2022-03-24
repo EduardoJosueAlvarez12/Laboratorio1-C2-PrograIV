@@ -64,6 +64,8 @@ class ActorController extends Controller
     public function edit($id)
     {
         //
+        $actor=Actor::findOrFail($id);
+        return view('actor.edit', compact('actor'));
     }
 
     /**
@@ -76,6 +78,9 @@ class ActorController extends Controller
     public function update(Request $request, $id)
     {
         //
+        $actorData = request()->except(['_token','_method']);
+        Actor::where('id', '=', $id)->update($actorData);
+        return redirect('actor');
     }
 
     /**
@@ -87,5 +92,7 @@ class ActorController extends Controller
     public function destroy($id)
     {
         //
+        Actor::destroy($id);
+        return redirect('actor');
     }
 }

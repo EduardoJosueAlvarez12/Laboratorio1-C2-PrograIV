@@ -37,6 +37,12 @@
                             onclick="return confirm('Do you want to delete this record?')">
                         </td>
                     </form>
+                    <!-- Edit button -->
+                    <form action="{{ url('/actor/'.$actor->id .'/edit') }}">
+                        <td>
+                            <input class="btn btn-success" type="submit" value="Editar">
+                        </td>
+                    </form>
                 </tr>
                 @endforeach
             </tbody>

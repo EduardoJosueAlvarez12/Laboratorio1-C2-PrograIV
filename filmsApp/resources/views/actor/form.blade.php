@@ -47,7 +47,7 @@
                         <div class="col-12">
                             <label for="birth_date" class="form-label">Birth Date</label>
                             <input type="date" class="form-control" name="birth_date" id="birth_date"
-                                placeholder="YYYY-MM-DD" value="{{ isset($actor->birth_place)?$actor->birth_place:'' }}" required>
+                                placeholder="YYYY-MM-DD" value="{{ isset($actor->birth_date)?$actor->birth_date:'' }}" required>
 
                             <div class="invalid-feedback">
                                 Type in you birth date
