@@ -18,4 +18,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+//se incluye el controlador con todas las rutas
 Route::resource('actor', ActorController::class);

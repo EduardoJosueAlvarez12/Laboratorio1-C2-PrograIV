@@ -1,4 +1,4 @@
-
+{{-- Aqui se incluye la navbar --}}
 @include("navbar")
     <center>
         <h1>Actors list</h1>
@@ -28,7 +28,7 @@
                     <td> {{ $actor->birth_date}} </td>
                     <td> {{ $actor->height}} </td>
                     <td> {{ $actor->net_worth}} </td>
-
+                    {{-- se incluye la opción de eliminar --}}
                     <form action="{{ url('/actor/'.$actor->id) }}" method="POST">
                         @csrf
                         {{ method_field('DELETE') }}
@@ -37,7 +37,7 @@
                             onclick="return confirm('Do you want to delete this record?')">
                         </td>
                     </form>
-                    <!-- Edit button -->
+                    {{-- se incluye la opción de editar--}}
                     <form action="{{ url('/actor/'.$actor->id .'/edit') }}">
                         <td>
                             <input class="btn btn-success" type="submit" value="Editar">
@@ -47,5 +47,5 @@
                 @endforeach
             </tbody>
         </table>
-
+{{-- aquí se incluye el footer --}}
 @include("footer")

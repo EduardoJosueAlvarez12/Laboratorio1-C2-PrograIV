@@ -9,7 +9,7 @@
                     </a>
                 </li>
             </ul>
-            <p class="text-center text-muted">&copy; Eduardo Alvarez & Juan Villatoro</p>
+            <p class="text-center text-muted">&copy; Eduardo Álvarez & Juan Villatoro</p>
           </footer>
 
 {{-- scripts --}}
